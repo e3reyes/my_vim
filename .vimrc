@@ -13,6 +13,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
@@ -21,12 +22,14 @@ filetype plugin indent on
 set laststatus=2 "lightline
 set number
 syntax on
-colorscheme onedark
+"colorscheme onedark
+set background=dark "for solarized colorscheme : dark | light
+"set t_Co=16
+colorscheme solarized
 set relativenumber
 set ruler
 set tabstop=2
 set expandtab
-
 " syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
