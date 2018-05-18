@@ -1,6 +1,7 @@
 set nocompatible
 " start vundle
 filetype off
+filetype plugin on "NERD Commenter
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
@@ -11,6 +12,7 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'itchyny/lightline.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
 
 call vundle#end()
 filetype plugin indent on
@@ -22,8 +24,8 @@ syntax on
 colorscheme onedark
 set relativenumber
 set ruler
-set smarttab
 set tabstop=2
+set expandtab
 
 " syntastic
 set statusline+=%#warningmsg#
@@ -35,6 +37,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let NERDTreeShowHidden=1
+
 " mapping keys
 map <Down> <NOP>
 map <Up> <NOP>
@@ -43,3 +47,4 @@ map <Right> <NOP>
 
 map <F6> :setlocal spell! spelllang=en_us<CR>
 map <C-n> :NERDTreeToggle<CR>
+
